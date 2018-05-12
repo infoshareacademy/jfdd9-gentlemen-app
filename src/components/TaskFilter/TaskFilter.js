@@ -9,7 +9,7 @@ class TaskFilter extends Component {
     return (
       <div className="task-sorting">
         <button name="byDueDate" onClick={this.props.enableSortingByDueDate}>Data {dateSortMode[this.props.dueDateSortMode]}</button>
-        <button name="byPriorityLevel" onClick={this.props.enableSortingByPriority}>Priotytet {prioritySortMode[this.props.prioritySortMode]}</button>
+        <button name="byPriorityLevel" onClick={this.props.enableSortingByPriority}>Priorytet {prioritySortMode[this.props.prioritySortMode]}</button>
       </div>
     )
   }
