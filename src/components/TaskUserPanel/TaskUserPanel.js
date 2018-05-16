@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+import './TaskUserPanel.css'
 
 class TaskUserPanel extends Component {
   render () {
-    return()
+    return(
+
+      <div>
+        <h1>TaskUserPanel</h1>
+      </div>
+
+    )
 }
 }
 

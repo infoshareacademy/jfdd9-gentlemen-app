@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withTasks} from "../contexts/Tasks";
 import TaskFilter from '../TaskFilter/TaskFilter'
 
+
 class TaskNav extends Component {
   render () {
     return (
@@ -30,6 +31,7 @@ class TaskNav extends Component {
 
         {/* sort by dueDate / sort by priority */}
         <TaskFilter/>
+
       </nav>
     )
   }

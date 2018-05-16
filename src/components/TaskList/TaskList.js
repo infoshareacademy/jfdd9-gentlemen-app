@@ -43,6 +43,7 @@ class TaskList extends Component {
     }
 
     return (
+
       <div>
         { this.props.tasksBeforeFilter().length !== 0 &&
           <span className='task-list'>
