@@ -20,9 +20,7 @@ export class TasksProvider extends Component {
     })
   };
 
-  buttonName = buttonName => {
-    return buttonName
-  };
+  buttonName = buttonName => { return buttonName };
 
   state = {
     tasks: [],
@@ -36,56 +34,56 @@ export class TasksProvider extends Component {
     showMyWeekMode: '0', // 0 - no filtering, 1 - show next 7 days tasks
     searchPhrase: '',
 
-    clearFilters: () => { this.filterRef.set({
+    clearFilters: () => this.filterRef.set({
         isDoneSortMode: '0',
         dueDateSortMode: '0',
         prioritySortMode: '0',
         showMyDayMode: '0',
         showMyWeekMode: '0'
-    }) },
+    }),
 
-    filterByIsDone: status => { this.filterRef.update({ isDoneSortMode: status }) },
+    filterByIsDone: status => this.filterRef.update({ isDoneSortMode: status }),
 
-    filterByDueDate: status => { this.filterRef.update({ dueDateSortMode: status }) },
+    filterByDueDate: status => this.filterRef.update({ dueDateSortMode: status }),
 
-    filterByPriority: status => { this.filterRef.update({ prioritySortMode: status }) },
+    filterByPriority: status => this.filterRef.update({ prioritySortMode: status }),
 
-    showMyDay: status => { this.filterRef.update({ showMyDayMode: status }) },
+    showMyDay: status => this.filterRef.update({ showMyDayMode: status }),
 
-    showMyWeek: status => { this.filterRef.update({ showMyWeekMode: status }) },
+    showMyWeek: status => this.filterRef.update({ showMyWeekMode: status }),
 
     updateSearchPhrase: searchPhrase => this.setState({ searchPhrase }),
 
-    addTask: (name, description, dueDate, priority) => {
+    addTask: (name, description, dueDate, priority, isCycle, taskCycleMode, cycleDate) => {
       this.tasksRef.push({
         name: name,
         description: description,
         dueDate: moment(dueDate).valueOf(),
         priority: priority,
-        isDone: false
+        isDone: false,
+        isCycleMode: isCycle,
+        taskCycleMode: taskCycleMode,
+        cycleDate: moment(cycleDate).valueOf()
       })
     },
 
-    updateTask: (id, name, description, dueDate, priority) => {
+    updateTask: (id, name, description, dueDate, priority, isCycle, taskCycleMode, cycleDate) => {
       this.tasksRef.child(id).update({
         name: name,
         description: description,
         dueDate: moment(dueDate).valueOf(),
-        priority: priority
+        priority: priority,
+        isCycleMode: isCycle,
+        taskCycleMode: taskCycleMode,
+        cycleDate: moment(cycleDate).valueOf()
       })
     },
 
-    removeTask: id => {
-      this.tasksRef.child(id).remove()
-    },
+    removeTask: id => this.tasksRef.child(id).remove(),
 
     toggleTaskDone: this.toggleTaskAttribute('isDone'),
 
-    toggleShowAddTaskPopup: () => {
-      this.setState({
-        currentForm: this.state.currentForm !== 'add' ? 'add' : null
-      })
-    },
+    toggleShowAddTaskPopup: () => this.setState({ currentForm: this.state.currentForm !== 'add' ? 'add' : null }),
 
     toggleShowEditTaskPopup: (taskId = null) => {
       this.setState({
@@ -117,9 +115,7 @@ export class TasksProvider extends Component {
       return options[formType]()
     },
 
-    tasksBeforeFilter: () => {
-      return this.state.tasks;
-    }
+    tasksBeforeFilter: () => { return this.state.tasks; }
   };
 
   render() {
@@ -136,11 +132,7 @@ export class TasksProvider extends Component {
     })
   };
 
-  handleFilterSnapshot = snapshot => {
-    this.setState(
-      snapshot.val()
-    )
-  };
+  handleFilterSnapshot = snapshot => this.setState(snapshot.val());
 
   componentDidMount() {
     this.unsubscribe = firebase.auth().onAuthStateChanged(

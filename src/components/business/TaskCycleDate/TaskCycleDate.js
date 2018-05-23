@@ -1,28 +1,26 @@
 import React, {Component} from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import './TaskDueDay.css';
+import './TaskCycleDate.css';
 import moment from 'moment'
 
-class TaskDueDay extends Component {
+class TaskCycleDate extends Component {
   state = {
-    dueDate: moment(this.props.dueDate)
+    cycleDate: moment(this.props.cycleDate)
   };
 
   handleChange = date => {
-    this.props.handleDate(date);
-    this.setState({
-      dueDate: date
-    });
+    this.props.handleCycleDate(date);
+    this.setState({ cycleDate: date });
   };
 
   render() {
     return (
-      <div>
-        <p>Data zakończenia</p>
-        <DatePicker className='date-picker'
+      <div className='cycle-date'>
+        <DatePicker className='cycle-date-picker'
           minDate={moment()}
-          selected={this.state.dueDate}
+          maxDate={moment(this.props.dueDate)}
+          selected={this.state.cycleDate}
           onChange={this.handleChange}
           withPortal
           dateFormat="DD-MM-YYYY"
@@ -32,4 +30,4 @@ class TaskDueDay extends Component {
   }
 }
 
-export default TaskDueDay
+export default TaskCycleDate
