@@ -17,7 +17,7 @@ moment.locale('pl')
 class TaskList extends Component {
     state = {
         dateFormatted: moment().format('llll'),
-        isDay: true
+        isDay: false
     }
     tick = () => {
         this.setState({
