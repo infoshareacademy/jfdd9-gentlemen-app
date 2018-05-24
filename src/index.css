@@ -35,43 +35,38 @@ body {
 .clear-filters-button,
 .add-task-button,
 .show-filters{
-  background:    #1481BA;
-  background:    -webkit-linear-gradient(#1481BA, #073763);
-  background:    linear-gradient(#1481BA, #073763);
+  background:    white;
   padding:       2px 5px;
-  color:         #ffffff;
+  color:         #d62261;
   display:       inline-block;
   font:          normal 400 13px/1 "Calibri", sans-serif;
   text-align:    center;
-  text-shadow:   1px 1px #000000;
   border-width:  0;
+  font-weight: bold;
+  border-radius: 2px;
 }
 
 .my-day, .my-week, .smallFilterButton{
-  background:    #9fc5e8;
-  background:    -webkit-linear-gradient(#9fc5e8, #3d85c6);
-  background:    linear-gradient(#9fc5e8, #3d85c6);
+  background:    white;
   border-radius: 2px;
   padding:       2px 5px;
-  color:         #ffffff;
+  color:         #d62261;
   display:       inline-block;
   font:          normal 400 13px/1 "Calibri", sans-serif;
   text-align:    center;
-  text-shadow:   1px 1px #000000;
   border-width: 0;
+  font-weight: bold;
 }
 
 .changeThemeBtn{
-  background:    #9fc5e8;
-  background:    -webkit-linear-gradient(#9fc5e8, #3d85c6);
-  background:    linear-gradient(#9fc5e8, #3d85c6);
+  background:    white;
   border-radius: 2px;
   padding:       2px 5px;
-  color:         #ffffff;
+  color:         #d62261;
   display:       inline-block;
   font:          normal 400 13px/1 "Calibri", sans-serif;
   text-align:    center;
-  text-shadow:   1px 1px #000000;
+  font-weight: bold;
   width:         130px;
   border-width: 0;
 }
