@@ -19,11 +19,11 @@ button:focus{
   color: #ffffff;
 }
 
-.nazwaKlasy{
+.backgroundOne{
   background-image: url(components/business/AppStyling/F8F9FA.png);
 }
 
-.nazwaKlasy2{
+.backgroundTwo{
   background-image: url(components/business/AppStyling/what-the-hex.png);
 }
 

@@ -14,7 +14,7 @@ const themes = {
           fontFamily: 'Roboto, sans-serif',
           color: "#000",
       },
-      bodyClass: "nazwaKlasy"
+      bodyClass: "backgroundOne"
 
     },
     taskManPink: {
@@ -32,7 +32,7 @@ const themes = {
           color: "#000",
           fontFamily: 'Roboto, sans-serif',
         },
-      bodyClass: "nazwaKlasy2"
+      bodyClass: "backgroundTwo"
     }
 };
 
