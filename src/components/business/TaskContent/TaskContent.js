@@ -97,6 +97,9 @@ class TaskContent extends Component {
   };
 
   render() {
+
+
+
     const task = this.props.task;
 
     let momentDate = moment().startOf('day');
@@ -120,6 +123,9 @@ class TaskContent extends Component {
     };
 
     return (
+
+
+
       <div className={`${task.priority} ` + (task.isCycleMode ? 'cycled-mode' : '') + ` ${task.isDone} task`}>
 
         <div className="checkbox">
@@ -154,6 +160,8 @@ class TaskContent extends Component {
           ><FontAwesomeIcon icon={faTrashAlt}/></button>
         </div>
       </div>
+
+
     )
   }
 }

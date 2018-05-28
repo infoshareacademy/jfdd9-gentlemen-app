@@ -84,3 +84,25 @@ button:focus{
 .taskLoading{
   font-size: 20px;
 }
+
+
+/*poczatek animacji*/
+.fade-enter{
+  right: 100px;
+}
+
+/*koniec animacji*/
+.fade-enter.fade-enter-active{
+  right: 0;
+  transition: .5s ease-in all;
+}
+
+.fade-leave{
+  opacity: 0;
+  transition: .5s ease-in all;
+}
+
+.fade-leave.fade-leave-active{
+  opacity: 1;
+}
+

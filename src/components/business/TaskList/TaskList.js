@@ -11,6 +11,9 @@ import TaskPanelUser from '../TaskPanelUser/TaskPanelUser'
 import moment from 'moment'
 import 'moment/locale/pl'
 import organizeTasks from "./organizeTasks";
+import { CSSTransitionGroup } from 'react-transition-group';
+
+
 
 moment.locale('pl');
 let intervalId = null;
@@ -83,7 +86,10 @@ class TaskList extends Component {
                         tasks.length === 0
                           ? <p className='no-result'>Brak wyników</p>
                           : <ul>
-                            {
+                            <CSSTransitionGroup transitionName="fade"
+                                                transitionEnterTimeout={500}
+                                                transitionLeaveTimeout={300}>
+                           {
                               tasks.map(
                                 task => (
                                   <li key={task.id}>
@@ -92,8 +98,9 @@ class TaskList extends Component {
                                 )
                               )
                             }
+                            </CSSTransitionGroup>
                           </ul>
-                        : //show banner
+                        ://show banner
                         <div className='banner'></div>
                     }
                   </div>

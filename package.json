@@ -12,13 +12,16 @@
     "progressbar.js": "^1.0.1",
     "rc-progress": "^2.2.5",
     "react": "^16.3.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-addons-transition-group": "^15.6.2",
     "react-datepicker": "^1.4.1",
     "react-dom": "^16.3.2",
     "react-fontawesome": "^1.6.1",
     "react-moment": "^0.7.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
-    "react-textarea-count": "^1.0.3"
+    "react-textarea-count": "^1.0.3",
+    "react-transition-group": "1.x"
   },
   "scripts": {
     "start": "react-scripts start",
